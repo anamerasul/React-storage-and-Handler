@@ -1,12 +1,23 @@
 import React from 'react';
+import './cos.css'
 
 const Cos = (props) => {
 
-    const {name,price}=props.cosmatic
+    const {name,price,id}=props.cosmatic
+
+    const addToCart=(id)=>{
+        console.log('item added',id)
+    }
+
+    const addToCartWithParam=()=>addToCart(id)
     return (
-        <div>
+        <div className="product">
             <h2>name{name}</h2>
             <p>price {price}</p>
+            <p>{id}</p>
+            <button onClick={addToCartWithParam}>add to card</button>
+
+            <button onClick={()=>addToCart(id)}>Purchase</button>
         </div>
     );
 };
