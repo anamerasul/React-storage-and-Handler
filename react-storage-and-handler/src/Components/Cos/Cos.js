@@ -1,4 +1,5 @@
 import React from 'react';
+import { addToDb } from '../Utlities/fakedb';
 import './cos.css'
 
 const Cos = (props) => {
@@ -7,6 +8,8 @@ const Cos = (props) => {
 
     const addToCart=(id)=>{
         console.log('item added',id)
+
+        addToDb(id)
     }
 
     const addToCartWithParam=()=>addToCart(id)
