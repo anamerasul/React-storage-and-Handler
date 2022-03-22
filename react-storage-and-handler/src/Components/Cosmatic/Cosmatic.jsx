@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cos from '../Cos/Cos';
+import { getTotal } from '../Utlities/calculate';
 // import { add } from '../Utlities/calculate';
 
 import './Cosmatic.css'
@@ -161,9 +162,13 @@ const Cosmatic = () => {
 
     },[])
 
+    const total=getTotal(cosmatics)
+
     return (
         <div>
             <h1>Welcome to my cosmatic</h1>
+
+                <p>moneyneede {total}</p>
             {/* <p>{total}</p> */}
             {
                 cosmatics.map(cosmatic=><Cos

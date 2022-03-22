@@ -21,7 +21,7 @@ const Cos = (props) => {
     return (
         <div className="product">
             <h2>name{name}</h2>
-            <p>price {price}</p>
+            <p>price :${price}</p>
             <p>{id}</p>
             <button onClick={addToCartWithParam}>add to card</button>
 
